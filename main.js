@@ -130,3 +130,51 @@ for (let i = 0; i < ftInstructors.length; i++) {
 for (let i = 0; i < ptInstructors.length; i++) {
     console.log(ptInstructors[0])
 }
+//
+/*
+Accessing Property Values / Beatles
+*/
+//
+const beatles = {
+    albums: ["Abbey Road", "Sgt Peppers Lonely Heart's Club Band", "Revolver", "Magical Mystery Tour", "Something New"],
+    history: {
+        formed: 1960,
+        disbanded: 1970
+    },
+    members: [
+        {
+            name: "George Harrison",
+            birth: 1943,
+            death: 2001
+        },
+        {
+            name: "Paul McCartney",
+            birth: 1942,
+            death: null
+        },
+        {
+            name: "John Lennon",
+            birth: 1940,
+            death: 1980
+        },
+        {
+            name: "Ringo Starr",
+            birth: 1940,
+            death: null
+        }
+    ]
+}
+//Output the following "Paul McCartney was in the Beatles from 1960 to 1970. He was born in 1942. He contributed heavily to the Magical Myster Tour Album."
+const paul = beatles.members[1].name
+for (let i = 0; i < paul.length; i++) {
+    // console.log(paul[0])
+}
+const bandStart = beatles.history.formed
+const bandEnd = beatles.history.disbanded
+const birthYear = beatles.members[1].birth
+for (let i = 0; i < birthYear.length; i++) {
+    // console.log(birthYear[1])
+}
+const album = beatles.albums[3]
+
+console.log(`${paul} was in the Beatles from ${bandStart} to ${bandEnd}. He was born in ${birthYear}. He contributed heavily to the ${album} Album.`)
